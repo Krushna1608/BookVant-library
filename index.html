@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVant - Digital Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <h1 class="logo-text"><i class="fa-solid fa-book-open-reader"></i> BookVant <span>Digital Library</span></h1>
+        </div>
+        <nav>
+            <a href="#" onclick="showSection('home-section')"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#" onclick="showSection('auth-section')"><i class="fa-solid fa-user"></i> Student Login</a>
+            <a href="#" onclick="showSection('about-section')"><i class="fa-solid fa-circle-info"></i> About</a>
+            <a href="#" onclick="showSection('help-section')"><i class="fa-solid fa-circle-question"></i> Help</a>
+            <button id="logout-btn" onclick="logoutStudent()" style="display: none;" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </nav>
+    </header>
+
+    <!-- 1. HOME SECTION (With HD Library Background) -->
+    <section id="home-section" class="tab-content">
+        <div class="hero-banner">
+            <div class="hero-overlay">
+                <h2>Digital Library for Maharashtra Students</h2>
+                <p>Access school & junior college textbooks online for free anytime, anywhere.</p>
+                <button class="btn-hero" onclick="showSection('auth-section')">Get Started / Login <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Instant Access</h3>
+                <p>Read textbooks directly with a single click without downloads.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-hard-drive"></i>
+                <h3>0 MB Storage</h3>
+                <p>Save phone and PC memory by reading directly in browser.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>All Streams & Mediums</h3>
+                <p>Supports English, Marathi, Semi-English, Science, Commerce & Arts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. AUTHENTICATION SECTION -->
+    <section id="auth-section" class="tab-content" style="display: none;">
+        <div class="auth-container">
+            <!-- Login Card -->
+            <div id="login-card" class="auth-card">
+                <h3><i class="fa-solid fa-right-to-bracket"></i> Student Login</h3>
+                <p class="sub-text">Please login to access textbooks (पुस्तके पाहण्यासाठी लॉगिन करा)</p>
+                
+                <div id="login-error" class="error-msg" style="display: none;"></div>
+
+                <input type="email" id="login-email" placeholder="Registered Email ID (e.g. user@gmail.com)" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                
+                <button onclick="loginStudent()" class="btn-primary-auth">Login</button>
+                
+                <div class="auth-links">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                    <p>New Student? <a href="#" onclick="showRegister()">Register Here</a></p>
+                </div>
+            </div>
+
+            <!-- Register Card -->
+            <div id="register-card" class="auth-card" style="display: none;">
+                <h3><i class="fa-solid fa-user-plus"></i> Student Registration</h3>
+                <p class="sub-text">Create your free account</p>
+
+                <input type="text" id="reg-name" placeholder="Full Name">
+                <input type="email" id="reg-email" placeholder="Email ID">
+                <input type="password" id="reg-password" placeholder="Create Password">
+                
+                <div class="show-password-container">
+                    <input type="checkbox" id="show-pass-check" onclick="togglePasswordVisibility()">
+                    <label for="show-pass-check">Show Password</label>
+                </div>
+                
+                <button onclick="registerStudent()" class="btn-primary-auth">Register Now</button>
+                <div class="auth-links">
+                    <p>Already registered? <a href="#" onclick="showLogin()">Login Here</a></p>
+                </div>
+            </div>
+
+            <!-- Forgot Password Card -->
+            <div id="forgot-card" class="auth-card" style="display: none;">
+                <h3><i class="fa-solid fa-key"></i> Reset Password</h3>
+                <input type="email" id="forgot-email" placeholder="Registered Email ID">
+                <input type="password" id="new-password" placeholder="New Password">
+                
+                <button onclick="resetPassword()" class="btn-primary-auth">Change Password</button>
+                <div class="auth-links">
+                    <a href="#" onclick="showLogin()">Back to Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about-section" class="tab-content content-page" style="display: none;">
+        <h2><i class="fa-solid fa-circle-info"></i> About BookVant Project</h2>
+        
+        <div class="about-point">
+            <h4><i class="fa-solid fa-bullseye"></i> Our Objective</h4>
+            <p>BookVant provides quick, seamless digital access to Maharashtra State Board curriculum textbooks from Class 1 to Class 12.</p>
+        </div>
+
+        <div class="about-point">
+            <h4><i class="fa-solid fa-bolt"></i> Fast & Lightweight Experience</h4>
+            <p>Designed for slow internet speeds and low device storage by rendering PDFs directly online.</p>
+        </div>
+
+        <div class="about-point">
+            <h4><i class="fa-solid fa-graduation-cap"></i> Stream Separation</h4>
+            <p>Class 11th & 12th are streamlined into Science, Commerce, and Arts streams with direct English Medium textbook links.</p>
+        </div>
+    </section>
+
+    <!-- 4. HELP SECTION -->
+    <section id="help-section" class="tab-content content-page" style="display: none;">
+        <h2><i class="fa-solid fa-circle-question"></i> Help & Support</h2>
+        
+        <div class="help-box">
+            <h4>1. How to Access Books? (पुस्तके कशी पाहावीत?)</h4>
+            <p>Go to <strong>Student Login</strong>, register your email ID, and log in. Choose your Class or Stream to read PDFs directly.</p>
+        </div>
+
+        <div class="help-box">
+            <h4>2. Email ID & Password Issues</h4>
+            <p>Ensure you enter a valid Email ID (e.g., student@gmail.com). Use the <strong>Forgot Password?</strong> option if needed.</p>
+        </div>
+
+        <div class="help-box">
+            <h4>3. Class 11th & 12th Stream Selection</h4>
+            <p>For Junior College (Std 11 & 12), select your stream (Science / Commerce / Arts) to view English medium textbooks directly.</p>
+        </div>
+    </section>
+
+    <!-- MAIN DASHBOARD SECTION -->
+    <div id="dashboard-section" style="display: none;">
+        <section class="hero-dash">
+            <h2 id="welcome-user">Welcome Student!</h2>
+            <p>Select your Standard or Stream below</p>
+        </section>
+
+        <section class="class-container">
+            <!-- SECTION 1: Standard 1 to 10 -->
+            <div class="section-box">
+                <h3 class="section-heading"><i class="fa-solid fa-school"></i> School Section (Std 1st to 10th)</h3>
+                
+                <div class="medium-selector">
+                    <label for="medium-select"><strong>Select Medium: </strong></label>
+                    <select id="medium-select" onchange="changeMedium()">
+                        <option value="marathi">Marathi Medium</option>
+                        <option value="semi">Semi-English Medium</option>
+                        <option value="english">English Medium</option>
+                    </select>
+                </div>
+
+                <div class="grid-classes">
+                    <button class="class-card" onclick="selectClass(1)">Std 1</button>
+                    <button class="class-card" onclick="selectClass(2)">Std 2</button>
+                    <button class="class-card" onclick="selectClass(3)">Std 3</button>
+                    <button class="class-card" onclick="selectClass(4)">Std 4</button>
+                    <button class="class-card" onclick="selectClass(5)">Std 5</button>
+                    <button class="class-card" onclick="selectClass(6)">Std 6</button>
+                    <button class="class-card" onclick="selectClass(7)">Std 7</button>
+                    <button class="class-card" onclick="selectClass(8)">Std 8</button>
+                    <button class="class-card" onclick="selectClass(9)">Std 9</button>
+                    <button class="class-card" onclick="selectClass(10)">Std 10</button>
+                </div>
+            </div>
+
+            <!-- SECTION 2: Standard 11th & 12th (Separate Streams, English Medium Only) -->
+            <div class="section-box jr-college-box">
+                <h3 class="section-heading"><i class="fa-solid fa-graduation-cap"></i> Junior College Section (Std 11th & 12th - English Medium)</h3>
+                
+                <div class="stream-group">
+                    <div class="stream-block">
+                        <h4>Class 11th Streams</h4>
+                        <div class="stream-buttons">
+                            <button class="btn-stream science" onclick="selectStream(11, 'science')"><i class="fa-solid fa-atom"></i> 11th Science</button>
+                            <button class="btn-stream commerce" onclick="selectStream(11, 'commerce')"><i class="fa-solid fa-chart-line"></i> 11th Commerce</button>
+                            <button class="btn-stream arts" onclick="selectStream(11, 'arts')"><i class="fa-solid fa-palette"></i> 11th Arts</button>
+                        </div>
+                    </div>
+
+                    <div class="stream-block">
+                        <h4>Class 12th Streams</h4>
+                        <div class="stream-buttons">
+                            <button class="btn-stream science" onclick="selectStream(12, 'science')"><i class="fa-solid fa-flask"></i> 12th Science</button>
+                            <button class="btn-stream commerce" onclick="selectStream(12, 'commerce')"><i class="fa-solid fa-coins"></i> 12th Commerce</button>
+                            <button class="btn-stream arts" onclick="selectStream(12, 'arts')"><i class="fa-solid fa-landmark"></i> 12th Arts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Books Display Area -->
+        <section class="books-section">
+            <h3 id="selected-class-title">Select a Class or Stream above</h3>
+            <div id="books-grid" class="books-grid"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>BookVant CEP Project:</strong> Direct Digital Resource Connection.</p>
+        <p>&copy; 2026 BookVant Digital Library. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- PDF Viewer Modal (eBalbharati साइटवर न जाता डायरेक्ट PDF दाखवण्यासाठी) -->
+    <div id="pdfModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999;">
+        <div style="position: relative; width: 85%; height: 90%; margin: 2% auto; background: #fff; border-radius: 8px; overflow: hidden;">
+            <button onclick="closePdf()" style="position: absolute; right: 12px; top: 12px; z-index: 10000; background: #ff4d4d; color: white; border: none; padding: 6px 14px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 14px;">✕ Close</button>
+            <iframe id="pdfFrame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Script File Link -->
+    <script src="script.js"></script>
+
+</body>
+</html>

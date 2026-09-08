@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text {
+    color: #1e3c72;
+    font-size: 24px;
+}
+
+.logo-text span {
+    color: #f39c12;
+    font-size: 13px;
+    display: block;
+}
+
+nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+.btn-logout {
+    padding: 8px 14px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+/* 1. Hero Banner with HD Library Image Background */
+.hero-banner {
+    background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    min-height: 380px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background: rgba(15, 32, 67, 0.82);
+    width: 100%;
+    height: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.btn-hero {
+    padding: 12px 28px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #d68910;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.feature-card i {
+    font-size: 32px;
+    color: #1e3c72;
+    margin-bottom: 12px;
+}
+
+/* 2. Auth Section */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 30px 20px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    border-top: 6px solid #1e3c72;
+}
+
+.auth-card h3 {
+    font-size: 20px;
+    color: #1e3c72;
+}
+
+/* Reduced Subtext Font Size */
+.sub-text {
+    font-size: 11px !important;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 18px;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.show-password-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+.btn-primary-auth {
+    width: 100%;
+    padding: 11px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error-msg {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #f5c6cb;
+}
+
+.auth-links {
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.auth-links a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 3. Spaced Out & Clean About/Help Pages */
+.content-page {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.content-page h2 {
+    color: #1e3c72;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.about-point, .help-box {
+    margin-bottom: 24px;
+    background: #f9fbfd;
+    padding: 18px;
+    border-left: 4px solid #1e3c72;
+    border-radius: 4px;
+}
+
+.about-point h4, .help-box h4 {
+    color: #1e3c72;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.about-point p, .help-box p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 4. Dashboard Layout */
+.hero-dash {
+    background: #1e3c72;
+    padding: 25px 20px;
+    color: white;
+    text-align: center;
+}
+
+.class-container {
+    padding: 30px 40px;
+}
+
+.section-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-heading {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.medium-selector {
+    margin-bottom: 20px;
+}
+
+.medium-selector select {
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #1e3c72;
+}
+
+.grid-classes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 12px;
+}
+
+.class-card {
+    padding: 12px;
+    background: #f8f9fa;
+    border: 2px solid #1e3c72;
+    color: #1e3c72;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.class-card:hover {
+    background-color: #1e3c72;
+    color: white;
+}
+
+/* Stream Section Styling */
+.stream-group {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.stream-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.stream-block h4 {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.stream-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-stream {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-stream:hover {
+    transform: translateY(-2px);
+}
+
+.btn-stream.science { background-color: #27ae60; }
+.btn-stream.commerce { background-color: #2980b9; }
+.btn-stream.arts { background-color: #8e44ad; }
+
+/* 5. Book Display Cards (Fixed Image Rendering) */
+.books-section {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    margin: 0 40px 40px 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.books-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.book-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-cover {
+    width: 130px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.book-card h4 {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 12px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-read {
+    width: 100%;
+    padding: 9px;
+    background-color: #1f7a4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-read:hover {
+    background-color: #165b38;
+}
+
+footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
