@@ -150,19 +150,19 @@ function logoutStudent() {
 const booksDatabase = {
     1: {
         marathi: [
-            { subject: "इयत्ता १ ली - मराठी (बालभारती)", cover: "images/1m(m).jpg", url: "pdf/marathi.pdf" },
-            { subject: "इयत्ता १ ली - गणित (मराठी माध्यम)", cover: "images/1ma(m).jpg", url: "pdf/maths(m).pdf" },
+            { subject: "इयत्ता १ ली - मराठी (बालभारती)", cover: "1/1m(m).jpg", url: "pdf/marathi.pdf" },
+            { subject: "इयत्ता १ ली - गणित (मराठी माध्यम)", cover: "1/1ma(m).jpg", url: "pdf/maths(m).pdf" },
             { subject: "इयत्ता १ ली - इंग्रजी (My English Book)", cover: "images/1e(m).jpg", url: "pdf/english.pdf" }
         ],
         english: [
-            { subject: "Std 1 - English", cover: "images/1e(e).jpg", url: "pdf/english(e).pdf" },
-            { subject: "Std 1 - Mathematics (English)", cover: "images/1ma(e).jpg", url: "pdf/maths(e).pdf" },
-            { subject: "Std 1 - Marathi", cover: "images/1m(e).jpg", url: "pdf/marathi.pdf" }
+            { subject: "Std 1 - English", cover: "1/1e(e).jpg", url: "pdf/english(e).pdf" },
+            { subject: "Std 1 - Mathematics (English)", cover: "1/1ma(e).jpg", url: "pdf/maths(e).pdf" },
+            { subject: "Std 1 - Marathi", cover: "1/1m(e).jpg", url: "pdf/marathi.pdf" }
         ],
         semi: [
-            { subject: "Std 1 - Mathematics (English)", cover: "images/1ma(e).jpg", url: "pdf/maths(e).pdf" },
-            { subject: "इयत्ता १ ली - मराठी", cover: "images/1m(m).jpg", url: "pdf/marathi.pdf" },
-            { subject: "Std 1 - English", cover: "images/1e(m).jpg", url: "pdf/english.pdf" }
+            { subject: "Std 1 - Mathematics (English)", cover: "1/1ma(e).jpg", url: "pdf/maths(e).pdf" },
+            { subject: "इयत्ता १ ली - मराठी", cover: "1/1m(m).jpg", url: "pdf/marathi.pdf" },
+            { subject: "Std 1 - English", cover: "1/1e(m).jpg", url: "pdf/english.pdf" }
         ]
     },
     2: {
