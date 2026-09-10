@@ -150,52 +150,52 @@ function logoutStudent() {
 const booksDatabase = {
     1: {
         marathi: [
-            { subject: "इयत्ता १ ली - मराठी (बालभारती)", cover: "images/1m(m).jpg", url: "pdf/marathi.pdf" },
-            { subject: "इयत्ता १ ली - गणित (मराठी माध्यम)", cover: "images/1ma(m).jpg", url: "pdf/maths(m).pdf" },
-            { subject: "इयत्ता १ ली - इंग्रजी (My English Book)", cover: "images/1e(m).jpg", url: "pdf/english.pdf" }
+            { subject: "इयत्ता १ ली - मराठी (बालभारती)", cover: "1m(m).jpg", url: "marathi.pdf" },
+            { subject: "इयत्ता १ ली - गणित (मराठी माध्यम)", cover: "1ma(m).jpg", url: "maths(m).pdf" },
+            { subject: "इयत्ता १ ली - इंग्रजी (My English Book)", cover: "1e(m).jpg", url: "english.pdf" }
         ],
         english: [
-            { subject: "Std 1 - English", cover: "images/1e(e).jpg", url: "pdf/english(e).pdf" },
-            { subject: "Std 1 - Mathematics (English)", cover: "images/1ma(e).jpg", url: "pdf/maths(e).pdf" },
-            { subject: "Std 1 - Marathi", cover: "images/1m(e).jpg", url: "pdf/marathi.pdf" }
+            { subject: "Std 1 - English", cover: "1e(e).jpg", url: "english(e).pdf" },
+            { subject: "Std 1 - Mathematics (English)", cover: "1ma(e).jpg", url: "maths(e).pdf" },
+            { subject: "Std 1 - Marathi", cover: "1m(e).jpg", url: "marathi.pdf" }
         ],
         semi: [
-            { subject: "Std 1 - Mathematics (English)", cover: "images/1ma(e).jpg", url: "pdf/maths(e).pdf" },
-            { subject: "इयत्ता १ ली - मराठी", cover: "images/1m(m).jpg", url: "pdf/marathi.pdf" },
-            { subject: "Std 1 - English", cover: "images/1e(m).jpg", url: "pdf/english.pdf" }
+            { subject: "Std 1 - Mathematics (English)", cover: "1ma(e).jpg", url: "maths(e).pdf" },
+            { subject: "इयत्ता १ ली - मराठी", cover: "1m(m).jpg", url: "marathi.pdf" },
+            { subject: "Std 1 - English", cover: "1e(m).jpg", url: "english.pdf" }
         ]
     },
     2: {
         marathi: [
-            { subject: "इयत्ता २ री - मराठी (बालभारती)", cover: "images/2m(m).jpg", url: "pdf/2marathi.pdf" },
-            { subject: "इयत्ता २ री - गणित (मराठी माध्यम)", cover: "images/2ma(m).jpg", url: "pdf/2maths(m).pdf" },
-            { subject: "इयत्ता २ री - इंग्रजी (My English Book)", cover: "images/2e(m).jpg", url: "pdf/2english.pdf" }
+            { subject: "इयत्ता २ री - मराठी (बालभारती)", cover: "2m(m).jpg", url: "2marathi.pdf" },
+            { subject: "इयत्ता २ री - गणित (मराठी माध्यम)", cover: "2ma(m).jpg", url: "2maths(m).pdf" },
+            { subject: "इयत्ता २ री - इंग्रजी (My English Book)", cover: "2e(m).jpg", url: "2english.pdf" }
         ],
         english: [
-            { subject: "Std 2 - English", cover: "images/2e(e).jpg", url: "pdf/2english(e).pdf" },
-            { subject: "Std 2 - Mathematics (English)", cover: "images/2ma(e).jpg", url: "pdf/2maths(e).pdf" },
-            { subject: "Std 2 - Marathi", cover: "images/2m(e).jpg", url: "pdf/2marathi(e).pdf" }
+            { subject: "Std 2 - English", cover: "2e(e).jpg", url: "2english(e).pdf" },
+            { subject: "Std 2 - Mathematics (English)", cover: "2ma(e).jpg", url: "2maths(e).pdf" },
+            { subject: "Std 2 - Marathi", cover: "2m(e).jpg", url: "2marathi(e).pdf" }
         ],
         semi: [
-            { subject: "Std 2 - Mathematics (English)", cover: "images/2ma(e).jpg", url: "pdf/2maths(e).pdf" },
-            { subject: "इयत्ता २ री - मराठी", cover: "images/2m(m).jpg", url: "pdf/2marathi.pdf" },
-            { subject: "Std 2 - English", cover: "images/2e(m).jpg", url: "pdf/2english.pdf" }
+            { subject: "Std 2 - Mathematics (English)", cover: "2ma(e).jpg", url: "2maths(e).pdf" },
+            { subject: "इयत्ता २ री - मराठी", cover: "2m(m).jpg", url: "2marathi.pdf" },
+            { subject: "Std 2 - English", cover: "2e(m).jpg", url: "2english.pdf" }
         ]
     },
     3: {
         marathi: [
-            { subject: "इयत्ता ३ री - मराठी (बालभारती)", cover: "images/3m(m).jpg", url: "pdf/3marathi(m).pdf" },
-            { subject: "इयत्ता ३ री - माय इंग्लिश बुक", cover: "images/3e(m).jpg", url: "pdf/3english(m).pdf" },
-            { subject: "इयत्ता ३ री - गणित", cover: "images/3ma(m).jpg", url: "pdf/3maths(m).pdf" },
-            { subject: "इयत्ता ३ री - आपल्या सभोवतालचे जग भा-१", cover: "images/3s(m).jpg", url: "pdf/3science(m).pdf" },
-            { subject: "इयत्ता ३ री - आपल्या सभोवतालचे जग भा-२", cover: "images/3s2(m).jpg", url: "pdf/3science2(m).pdf" }
+            { subject: "इयत्ता ३ री - मराठी (बालभारती)", cover: "3m(m).jpg", url: "3marathi(m).pdf" },
+            { subject: "इयत्ता ३ री - माय इंग्लिश बुक", cover: "3e(m).jpg", url: "3english(m).pdf" },
+            { subject: "इयत्ता ३ री - गणित", cover: "3ma(m).jpg", url: "3maths(m).pdf" },
+            { subject: "इयत्ता ३ री - आपल्या सभोवतालचे जग भा-१", cover: "3s(m).jpg", url: "3science(m).pdf" },
+            { subject: "इयत्ता ३ री - आपल्या सभोवतालचे जग भा-२", cover: "3s2(m).jpg", url: "3science2(m).pdf" }
         ],
         english: [
-            { subject: "Std 3 - Marathi", cover: "images/3m(e).jpg", url: "pdf/3marathi(e).pdf" },
-            { subject: "Std 3 - English", cover: "images/3e(e).jpg", url: "pdf/3english(e).pdf" },
-            { subject: "Std 3 - Mathematics", cover: "images/3ma(e).jpg", url: "pdf/3maths(e).pdf" },
-            { subject: "Std 3 - The World Around Us", cover: "images/3s(e).jpg", url: "pdf/3science(e).pdf" },
-            { subject: "Std 3 - The World Around Us 2", cover: "images/3s2(e).jpg", url: "pdf/3science2(e).pdf" }
+            { subject: "Std 3 - Marathi", cover: "3m(e).jpg", url: "3marathi(e).pdf" },
+            { subject: "Std 3 - English", cover: "3e(e).jpg", url: "3english(e).pdf" },
+            { subject: "Std 3 - Mathematics", cover: "3ma(e).jpg", url: "3maths(e).pdf" },
+            { subject: "Std 3 - The World Around Us", cover: "3s(e).jpg", url: "3science(e).pdf" },
+            { subject: "Std 3 - The World Around Us 2", cover: "3s2(e).jpg", url: "3science2(e).pdf" }
         ],
         semi: [
             { subject: "इयत्ता ३ री - मराठी", cover: "images/3m(m).jpg", url: "pdf/3marathi(m).pdf" },
